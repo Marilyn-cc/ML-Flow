@@ -300,9 +300,6 @@ export default function PracticePage() {
 
           {/* Pagination */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-gray-500">
-              Showing 1 to 8 of 28 notebooks
-            </p>
             <div className="flex items-center gap-1.5">
               <button
                 aria-label="Previous page"

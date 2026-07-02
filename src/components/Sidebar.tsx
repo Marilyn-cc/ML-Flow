@@ -19,7 +19,6 @@ const NAV_ITEMS = [
   { href: "/practice", label: "Practice", icon: Code2 },
   { href: "/resources", label: "Resources", icon: FileText },
   { href: "/roadmap", label: "Roadmap", icon: BookOpen },
-  { href: "/progress", label: "Progress", icon: TrendingUp },
 ];
 
 type SidebarProps = {
@@ -72,8 +71,6 @@ export default function Sidebar({ active, promo = "learning" }: SidebarProps) {
                 : "text-gray-500 hover:bg-gray-50 hover:text-gray-800"
             }`}
           >
-            <Info size={18} strokeWidth={2} />
-            About
           </Link>
         </nav>
       </div>
@@ -96,12 +93,6 @@ export default function Sidebar({ active, promo = "learning" }: SidebarProps) {
           <p className="text-sm text-gray-500 mb-3">
             Consistency builds real skills.
           </p>
-          <div className="flex items-center gap-1 text-xs font-medium text-gray-700 mb-2">
-            3 day streak <Flame size={14} className="text-orange-500" />
-          </div>
-          <div className="h-1.5 w-full rounded-full bg-gray-200 overflow-hidden">
-            <div className="h-full w-2/5 rounded-full bg-brand" />
-          </div>
         </div>
       )}
     </aside>
