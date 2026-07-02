@@ -15,7 +15,6 @@ import {
 
 const NAV_ITEMS = [
   { href: "/", label: "Home", icon: Home },
-  { href: "/learn", label: "Learn", icon: Bookmark },
   { href: "/practice", label: "Practice", icon: Code2 },
   { href: "/resources", label: "Resources", icon: FileText },
   { href: "/roadmap", label: "Roadmap", icon: BookOpen },

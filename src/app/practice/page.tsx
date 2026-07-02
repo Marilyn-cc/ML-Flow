@@ -27,7 +27,6 @@ const NOTEBOOKS = [
     title: "Python Basics Refresher",
     description: "Revisit Python fundamentals with hands-on examples.",
     tags: [{ label: "Beginner", color: "emerald" }, { label: "Python", color: "gray" }],
-    cells: 12,
     minutes: 15,
     icon: BarChart3,
     iconBg: "bg-emerald-50",
@@ -37,7 +36,6 @@ const NOTEBOOKS = [
     title: "Numpy Essentials",
     description: "Learn array operations, broadcasting and more with numpy.",
     tags: [{ label: "Beginner", color: "emerald" }, { label: "Numpy", color: "gray" }],
-    cells: 18,
     minutes: 20,
     icon: Database,
     iconBg: "bg-blue-50",
@@ -47,7 +45,6 @@ const NOTEBOOKS = [
     title: "Pandas Data Handling",
     description: "Load, clean and manipulate data like a pro.",
     tags: [{ label: "Beginner", color: "emerald" }, { label: "Pandas", color: "gray" }],
-    cells: 22,
     minutes: 25,
     icon: Table,
     iconBg: "bg-amber-50",
@@ -57,28 +54,22 @@ const NOTEBOOKS = [
     title: "Data Visualization with Matplotlib",
     description: "Visualize your data with clear and beautiful plots.",
     tags: [{ label: "Beginner", color: "emerald" }, { label: "Visualization", color: "gray" }],
-    cells: 16,
-    minutes: 20,
     icon: LineChart,
     iconBg: "bg-violet-50",
     iconColor: "text-violet-600",
   },
   {
-    title: "Linear Regression from Scratch",
+    title: "Linear Regression ",
     description: "Build a linear regression model step by step.",
     tags: [{ label: "Intermediate", color: "amber" }, { label: "Regression", color: "gray" }],
-    cells: 24,
-    minutes: 30,
     icon: ScatterChart,
     iconBg: "bg-rose-50",
     iconColor: "text-rose-600",
   },
   {
-    title: "Logistic Regression in Practice",
+    title: "Logistic Regression",
     description: "Solve classification problems with logistic regression.",
     tags: [{ label: "Intermediate", color: "amber" }, { label: "Classification", color: "gray" }],
-    cells: 20,
-    minutes: 25,
     icon: Sigma,
     iconBg: "bg-teal-50",
     iconColor: "text-teal-600",
@@ -87,8 +78,6 @@ const NOTEBOOKS = [
     title: "K-Means Clustering",
     description: "Group similar data points using K-Means algorithm.",
     tags: [{ label: "Intermediate", color: "amber" }, { label: "Clustering", color: "gray" }],
-    cells: 18,
-    minutes: 25,
     icon: CircleDot,
     iconBg: "bg-orange-50",
     iconColor: "text-orange-600",
@@ -97,8 +86,6 @@ const NOTEBOOKS = [
     title: "Random Forest Classifier",
     description: "Use ensemble learning to improve prediction accuracy.",
     tags: [{ label: "Advanced", color: "rose" }, { label: "Ensemble", color: "gray" }],
-    cells: 28,
-    minutes: 35,
     icon: TreePine,
     iconBg: "bg-violet-50",
     iconColor: "text-violet-600",
@@ -189,10 +176,6 @@ export default function PracticePage() {
                   <ChevronDown size={14} className="text-gray-400" />
                 </button>
               ))}
-              <button className="flex items-center gap-1.5 text-sm font-medium text-brand hover:text-brand-dark ml-auto">
-                <RotateCcw size={14} />
-                Clear Filters
-              </button>
             </div>
 
             <div className="flex flex-wrap items-center gap-2">
@@ -280,14 +263,6 @@ export default function PracticePage() {
 
                 <div className="flex items-center justify-between pt-3 border-t border-gray-50">
                   <div className="flex items-center gap-3 text-xs text-gray-400">
-                    <span className="flex items-center gap-1">
-                      <FileStack size={13} />
-                      {nb.cells} cells
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock size={13} />
-                      {nb.minutes} min
-                    </span>
                   </div>
                   <button className="flex items-center gap-1 text-sm font-medium text-brand hover:text-brand-dark">
                     <Play size={13} fill="currentColor" />
@@ -296,40 +271,6 @@ export default function PracticePage() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Pagination */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-1.5">
-              <button
-                aria-label="Previous page"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 text-gray-400 hover:bg-gray-50"
-              >
-                <ChevronLeft size={16} />
-              </button>
-              {[1, 2, 3, 4].map((page) => (
-                <button
-                  key={page}
-                  className={`flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium ${
-                    page === 1
-                      ? "bg-brand text-white"
-                      : "border border-gray-200 text-gray-600 hover:bg-gray-50"
-                  }`}
-                >
-                  {page}
-                </button>
-              ))}
-              <button
-                aria-label="Next page"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 text-gray-400 hover:bg-gray-50"
-              >
-                <ChevronRight size={16} />
-              </button>
-            </div>
-            <button className="flex items-center gap-2 rounded-lg border border-gray-200 px-3.5 py-2 text-sm text-gray-600 hover:bg-gray-50">
-              8 per page
-              <ChevronDown size={14} className="text-gray-400" />
-            </button>
           </div>
         </main>
       </div>
